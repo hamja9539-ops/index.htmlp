@@ -3,133 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earn Online</title>
 
-<title>Earn Online 2026 | AI, Crypto & CPA</title>
-<meta name="description" content="High CPM earning blog with AI tools, crypto airdrops and CPA marketing tips.">
-
-<!-- 🔥 HILLTOP ADS CODE (Paste Your Code Below) -->
-<!-- Replace below script with your HilltopAds code -->
-<script>
-/* PASTE YOUR HILLTOP ADS SCRIPT HERE */
-</script>
+<!-- HilltopAds Verification Meta -->
+<meta name="fbd76df231d0cfc5a5174f1ac47ffcec11f7757c" content="fbd76df231d0cfc5a5174f1ac47ffcec11f7757c" />
 
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
-header{background:#111827;padding:20px;text-align:center}
-header h1{margin:0}
-.container{max-width:1000px;margin:auto;padding:20px}
-.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
-input,select{
-padding:10px;
-border-radius:6px;
-border:none;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
 }
-.post{
-background:#1e293b;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-cursor:pointer;
-transition:0.3s;
+header{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
-.post:hover{background:#334155;transform:translateY(-3px)}
-.title{font-size:20px;font-weight:bold}
-.meta{font-size:12px;color:#94a3b8;margin:5px 0}
-.content{display:none;margin-top:10px;line-height:1.6}
-footer{background:#111827;text-align:center;padding:15px;margin-top:30px}
+.container{
+    padding:20px;
+}
+.card{
+    background:#fff;
+    padding:20px;
+    margin:20px 0;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+}
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
-<h1>🔥 Earn Online Blog</h1>
-<p>AI Tools | Crypto | CPA Marketing</p>
+<h1>Earn Online Easily</h1>
+<p>Simple Ways to Make Money Online</p>
 </header>
 
 <div class="container">
 
-<div class="controls">
-<input type="text" id="search" placeholder="Search article...">
-<select id="category">
-<option value="all">All Categories</option>
-<option value="AI">AI</option>
-<option value="Crypto">Crypto</option>
-<option value="CPA">CPA</option>
-</select>
+<div class="card">
+<h2>Freelancing</h2>
+<p>Start earning by offering your skills online.</p>
 </div>
 
-<div id="blog"></div>
+<div class="card">
+<h2>Affiliate Marketing</h2>
+<p>Promote products and earn commission easily.</p>
+</div>
 
 </div>
 
 <footer>
-© 2026 Earn Online Blog | High CPM Monetization
+© 2026 Earn Online
 </footer>
-
-<script>
-
-const posts = [
-{
-title:"Top AI Tools To Make Money",
-date:"Feb 20, 2026",
-category:"AI",
-content:"AI content writing, YouTube automation and blogging tools help generate passive income. Focus on US keywords for higher CPM rates."
-},
-{
-title:"Best Crypto Airdrops This Month",
-date:"Feb 18, 2026",
-category:"Crypto",
-content:"Participate in blockchain testnets and social campaigns to earn free tokens from upcoming projects."
-},
-{
-title:"CPA Marketing Beginner Guide",
-date:"Feb 15, 2026",
-category:"CPA",
-content:"Promote mobile apps and get paid per install. Tier 1 countries provide the highest payout rates."
-}
-];
-
-const blog=document.getElementById("blog");
-const search=document.getElementById("search");
-const category=document.getElementById("category");
-
-function renderPosts(){
-blog.innerHTML="";
-let searchValue=search.value.toLowerCase();
-let categoryValue=category.value;
-
-posts.forEach((post,index)=>{
-if(
-(post.title.toLowerCase().includes(searchValue) ||
-post.content.toLowerCase().includes(searchValue)) &&
-(categoryValue==="all" || post.category===categoryValue)
-){
-let div=document.createElement("div");
-div.className="post";
-
-div.innerHTML=`
-<div class="title">${post.title}</div>
-<div class="meta">${post.date} | ${post.category}</div>
-<div class="content" id="c-${index}">${post.content}</div>
-`;
-
-div.onclick=function(){
-let content=document.getElementById("c-"+index);
-content.style.display=content.style.display==="block"?"none":"block";
-};
-
-blog.appendChild(div);
-}
-});
-}
-
-search.addEventListener("input",renderPosts);
-category.addEventListener("change",renderPosts);
-
-renderPosts();
-
-</script>
 
 </body>
 </html>
