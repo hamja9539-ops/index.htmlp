@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Blog | Earn Online 2026</title>
+
+<meta name="description" content="High paying AI tools, crypto earning and CPA marketing guides.">
+<meta name="keywords" content="earn online, AI tools, crypto airdrop, CPA marketing">
+
+<!-- POPADS CODE -->
+<script>
+var uid = 'YOUR_POPADS_ID';
+</script>
+<script src="//c1.popads.net/pop.js"></script>
+
+<style>
+body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
+header{background:#111827;padding:20px;text-align:center}
+.container{max-width:1000px;margin:auto;padding:20px}
+input,select{
+padding:10px;
+margin:10px 5px;
+border-radius:5px;
+border:none;
+}
+.post{
+background:#1e293b;
+padding:20px;
+margin:15px 0;
+border-radius:8px;
+cursor:pointer;
+}
+.post:hover{background:#334155}
+.title{font-size:20px;font-weight:bold}
+.meta{font-size:12px;color:#94a3b8;margin-bottom:10px}
+.content{display:none;margin-top:10px}
+footer{background:#111827;text-align:center;padding:15px;margin-top:30px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔥 Earn Online Auto Blog</h1>
+<p>AI Tools | Crypto | CPA Marketing</p>
+</header>
+
+<div class="container">
+
+<input type="text" id="search" placeholder="Search article...">
+<select id="categoryFilter">
+<option value="all">All Categories</option>
+<option value="AI">AI</option>
+<option value="Crypto">Crypto</option>
+<option value="CPA">CPA</option>
+</select>
+
+<div id="blog"></div>
+
+</div>
+
+<footer>
+© 2026 Auto Blog | High CPM Monetization
+</footer>
+
+<script>
+
+const posts = [
+{
+title:"Top 5 AI Tools to Make Money",
+date:"Feb 20, 2026",
+category:"AI",
+content:"AI content writing, video automation and blogging tools can help generate passive income online. Target US traffic for better CPM."
+},
+{
+title:"Best Crypto Airdrops This Month",
+date:"Feb 18, 2026",
+category:"Crypto",
+content:"Participate in testnets and social tasks to receive free tokens from upcoming blockchain projects."
+},
+{
+title:"CPA Marketing Beginner Guide",
+date:"Feb 15, 2026",
+category:"CPA",
+content:"Promote mobile apps globally and earn per install. Tier 1 countries provide highest payout."
+}
+];
+
+const blogContainer=document.getElementById("blog");
+const searchInput=document.getElementById("search");
+const categoryFilter=document.getElementById("categoryFilter");
+
+function renderPosts(){
+blogContainer.innerHTML="";
+let searchValue=searchInput.value.toLowerCase();
+let categoryValue=categoryFilter.value;
+
+posts.forEach((post,index)=>{
+if(
+(post.title.toLowerCase().includes(searchValue) ||
+post.content.toLowerCase().includes(searchValue)) &&
+(categoryValue==="all" || post.category===categoryValue)
+){
+const postDiv=document.createElement("div");
+postDiv.className="post";
+
+postDiv.innerHTML=`
+<div class="title">${post.title}</div>
+<div class="meta">${post.date} | ${post.category}</div>
+<div class="content" id="content-${index}">${post.content}</div>
+`;
+
+postDiv.addEventListener("click",()=>{
+let content=document.getElementById(`content-${index}`);
+content.style.display=content.style.display==="block"?"none":"block";
+});
+
+blogContainer.appendChild(postDiv);
+}
+});
+}
+
+searchInput.addEventListener("input",renderPosts);
+categoryFilter.addEventListener("change",renderPosts);
+
+renderPosts();
+
+</script>
+
+</body>
+</html>
