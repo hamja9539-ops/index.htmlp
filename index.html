@@ -3,38 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto Blog | Earn Online 2026</title>
 
-<meta name="description" content="High paying AI tools, crypto earning and CPA marketing guides.">
-<meta name="keywords" content="earn online, AI tools, crypto airdrop, CPA marketing">
+<title>Earn Online 2026 | AI, Crypto & CPA</title>
+<meta name="description" content="High CPM earning blog with AI tools, crypto airdrops and CPA marketing tips.">
 
-<!-- POPADS CODE -->
+<!-- 🔥 HILLTOP ADS CODE (Paste Your Code Below) -->
+<!-- Replace below script with your HilltopAds code -->
 <script>
-var uid = 'YOUR_POPADS_ID';
+/* PASTE YOUR HILLTOP ADS SCRIPT HERE */
 </script>
-<script src="//c1.popads.net/pop.js"></script>
 
 <style>
 body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
 header{background:#111827;padding:20px;text-align:center}
+header h1{margin:0}
 .container{max-width:1000px;margin:auto;padding:20px}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
 input,select{
 padding:10px;
-margin:10px 5px;
-border-radius:5px;
+border-radius:6px;
 border:none;
 }
 .post{
 background:#1e293b;
 padding:20px;
-margin:15px 0;
-border-radius:8px;
+margin-bottom:20px;
+border-radius:10px;
 cursor:pointer;
+transition:0.3s;
 }
-.post:hover{background:#334155}
+.post:hover{background:#334155;transform:translateY(-3px)}
 .title{font-size:20px;font-weight:bold}
-.meta{font-size:12px;color:#94a3b8;margin-bottom:10px}
-.content{display:none;margin-top:10px}
+.meta{font-size:12px;color:#94a3b8;margin:5px 0}
+.content{display:none;margin-top:10px;line-height:1.6}
 footer{background:#111827;text-align:center;padding:15px;margin-top:30px}
 </style>
 </head>
@@ -42,59 +43,61 @@ footer{background:#111827;text-align:center;padding:15px;margin-top:30px}
 <body>
 
 <header>
-<h1>🔥 Earn Online Auto Blog</h1>
+<h1>🔥 Earn Online Blog</h1>
 <p>AI Tools | Crypto | CPA Marketing</p>
 </header>
 
 <div class="container">
 
+<div class="controls">
 <input type="text" id="search" placeholder="Search article...">
-<select id="categoryFilter">
+<select id="category">
 <option value="all">All Categories</option>
 <option value="AI">AI</option>
 <option value="Crypto">Crypto</option>
 <option value="CPA">CPA</option>
 </select>
+</div>
 
 <div id="blog"></div>
 
 </div>
 
 <footer>
-© 2026 Auto Blog | High CPM Monetization
+© 2026 Earn Online Blog | High CPM Monetization
 </footer>
 
 <script>
 
 const posts = [
 {
-title:"Top 5 AI Tools to Make Money",
+title:"Top AI Tools To Make Money",
 date:"Feb 20, 2026",
 category:"AI",
-content:"AI content writing, video automation and blogging tools can help generate passive income online. Target US traffic for better CPM."
+content:"AI content writing, YouTube automation and blogging tools help generate passive income. Focus on US keywords for higher CPM rates."
 },
 {
 title:"Best Crypto Airdrops This Month",
 date:"Feb 18, 2026",
 category:"Crypto",
-content:"Participate in testnets and social tasks to receive free tokens from upcoming blockchain projects."
+content:"Participate in blockchain testnets and social campaigns to earn free tokens from upcoming projects."
 },
 {
 title:"CPA Marketing Beginner Guide",
 date:"Feb 15, 2026",
 category:"CPA",
-content:"Promote mobile apps globally and earn per install. Tier 1 countries provide highest payout."
+content:"Promote mobile apps and get paid per install. Tier 1 countries provide the highest payout rates."
 }
 ];
 
-const blogContainer=document.getElementById("blog");
-const searchInput=document.getElementById("search");
-const categoryFilter=document.getElementById("categoryFilter");
+const blog=document.getElementById("blog");
+const search=document.getElementById("search");
+const category=document.getElementById("category");
 
 function renderPosts(){
-blogContainer.innerHTML="";
-let searchValue=searchInput.value.toLowerCase();
-let categoryValue=categoryFilter.value;
+blog.innerHTML="";
+let searchValue=search.value.toLowerCase();
+let categoryValue=category.value;
 
 posts.forEach((post,index)=>{
 if(
@@ -102,27 +105,27 @@ if(
 post.content.toLowerCase().includes(searchValue)) &&
 (categoryValue==="all" || post.category===categoryValue)
 ){
-const postDiv=document.createElement("div");
-postDiv.className="post";
+let div=document.createElement("div");
+div.className="post";
 
-postDiv.innerHTML=`
+div.innerHTML=`
 <div class="title">${post.title}</div>
 <div class="meta">${post.date} | ${post.category}</div>
-<div class="content" id="content-${index}">${post.content}</div>
+<div class="content" id="c-${index}">${post.content}</div>
 `;
 
-postDiv.addEventListener("click",()=>{
-let content=document.getElementById(`content-${index}`);
+div.onclick=function(){
+let content=document.getElementById("c-"+index);
 content.style.display=content.style.display==="block"?"none":"block";
-});
+};
 
-blogContainer.appendChild(postDiv);
+blog.appendChild(div);
 }
 });
 }
 
-searchInput.addEventListener("input",renderPosts);
-categoryFilter.addEventListener("change",renderPosts);
+search.addEventListener("input",renderPosts);
+category.addEventListener("change",renderPosts);
 
 renderPosts();
 
